@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { to: '/dashboard', label: 'Overview' },
   { to: '/applications', label: 'Applications' },
   { to: '/follow-ups', label: 'Follow-ups' },
+  { to: '/dsa', label: 'DSA Tracker' },
   { to: '/profile', label: 'Profile' },
 ];
 

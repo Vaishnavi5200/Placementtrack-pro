@@ -14,6 +14,9 @@ import ApplicationDetails from './pages/ApplicationDetails';
 import FollowUps from './pages/FollowUps';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
+import DsaTracker from './pages/DsaTracker';
+import AddDsaProblem from './pages/AddDsaProblem';
+import EditDsaProblem from './pages/EditDsaProblem';
 
 // Wraps every private page with the persistent Navbar.
 const PrivateLayout = ({ children }) => (
@@ -120,6 +123,36 @@ function App() {
             <ProtectedRoute>
               <PrivateLayout>
                 <Profile />
+              </PrivateLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dsa"
+          element={
+            <ProtectedRoute>
+              <PrivateLayout>
+                <DsaTracker />
+              </PrivateLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dsa/new"
+          element={
+            <ProtectedRoute>
+              <PrivateLayout>
+                <AddDsaProblem />
+              </PrivateLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dsa/:id/edit"
+          element={
+            <ProtectedRoute>
+              <PrivateLayout>
+                <EditDsaProblem />
               </PrivateLayout>
             </ProtectedRoute>
           }
